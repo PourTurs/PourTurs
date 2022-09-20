@@ -1,0 +1,238 @@
+*{
+    padding: 0;
+    margin:0;
+}
+.menu{
+    background: whitesmoke;
+  }
+  .menu .menu-list{
+    list-style: none;
+    float: right;
+    margin: 30px;
+  }
+.menu-list img{
+    height: 100px;
+    width: 100px;
+    float: left;
+    margin: 0px 600px 0px 0px;
+  }
+  .menu a{
+    color: #DAA520;
+    text-decoration: none;
+    display: inline-flex;
+    cursor: pointer;
+    text-transform: uppercase;
+    font-size: 12px;
+    font-weight: 700;
+    letter-spacing:0.2em;
+    transition: 0.4s;
+  }
+  .menu a:hover{
+    border-bottom: solid 5px #DAA520;
+    border-top: solid 3px #DAA520;
+  }
+  .menu > .menu-list > li{
+    float: left;
+    position: relative;
+  }
+  .menu > .menu-list > li > a {
+    padding: 20px;
+  margin: 0 5px;
+  background: #000;
+  }
+  .menu .menu-list, .menu .sub-menu{
+    list-style: none;
+  }
+  .menu > .menu-list > li{
+    float: left;
+    position: relative;
+  }
+  
+  .menu > .menu-list > li > a {
+    padding: 20px;
+    margin: 0 5px;
+    background: #000;
+  }
+  
+  .menu > .menu-list > li:hover a {
+    background: #444;
+  }
+  
+  .menu > .menu-list > li:hover > .sub-menu {
+    display: block;
+  }
+  .menu > .menu-list > li > .sub-menu {
+    position: absolute;
+    top: 50px;
+    left: 5px;
+    padding: 0px 0px 0px 20px;
+    background: black;
+    min-width: 100px;
+    z-index: 1000;
+    display: none;
+  }
+  
+  .menu > .menu-list > li > .sub-menu > li > a {
+      padding: 10px 20px;
+  }
+  
+  .menu:after {
+    content: '.';
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+  }
+.conteudo{
+    height: 100vh;
+    width: 100%;
+    background-image: linear-gradient(rgba(0,0,0,0.2), rgba(0,0,0,0.7)),url(img/fundo1.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+.conteudo h1{
+    font-size: 70px;
+    padding: 250px 100px 0px 500px;
+    border-top: solid 5px white;
+}
+.conteudo h2{
+    padding: 20px 100px 0px 600px;
+}
+.sobre{
+  width: 100%;
+  height: 50vh;
+  background-color: white;
+  text-align: left;
+}
+.sobre h1{
+  font-size: 60px;
+  padding: 70px 50px 0px 140px;
+}
+.sobre h2{
+  font-size: 30px;
+  padding: 0px 0px 0px 190px;
+}
+.sobre h3{
+  padding: 30px 20px 20px 190px;
+}
+.sobre img{
+  float: right;
+  transition: 0.5s;
+}
+.sobre img:hover{
+  transform: scale(1.1);
+}
+.sobre .saiba{
+  margin: 30px 20px 20px 229px;
+  border-radius: 20px;
+  padding: 12px 30px 12px 30px;
+  background-color: #DAA520;
+  border: none;
+  color: white;
+  transition: 0.3s;
+}
+.saiba:hover{
+  cursor: pointer;
+  background-color: #000;
+  border: solid 3px #DAA520;
+}
+.card {
+  width: 340px;
+  height: 475px;
+  cursor: pointer;
+}
+.main {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+.front img {
+  width: 340px;
+  height: 475px;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #000;
+
+}
+.front,
+.back {
+  width: 340px;
+  height: 475px;
+  backface-visibility: hidden;
+  position: absolute;
+  border-radius: 20px;
+  box-shadow: 5px 5px 10px #000;
+  transition: transform 1s linear;
+  margin-top: 100px;
+}
+.front {
+  transform: perspective(600px) rotateY(0deg);
+}
+.back {
+  background: #ececec;
+  transform: perspective(600px) rotateY(180deg);
+}
+.content {
+  text-align: center;
+  color: #333;
+  width: 100%;
+}
+.s-media {
+  margin: 45px 0;
+}
+.s-media a {
+  text-decoration: none;
+  display: inline-flex;
+  width: 40px;
+  height: 40px;
+  justify-content: center;
+  align-items: center;
+  color: #333;
+  font-size: 20px;
+  transition: 0.4s;
+  margin-right: 10px;
+  border-radius: 50%;
+  padding: 1px;
+}
+.s-media a:hover {
+  background: #333;
+  color: #fff;
+}
+h3 {
+  text-align: center;
+  color: red;
+  width: 130px;
+  padding: 5px;
+  border-radius: 8px;
+  margin-left: 25%;
+}
+.card:hover > .front {
+  transform: perspective(600px) rotateY(-180deg);
+}
+.card:hover > .back {
+  transform: perspective(600px) rotateY(0deg);
+}
+
+@media(max-width:663px){
+  .menu{
+    display: none;
+  }
+  button .i{
+    display: block;
+  }
+  button{
+    display: block;
+    float: right;
+    height: 40px;
+    width: 40px;
+    margin: 30px;
+    border-radius: 10px;
+    transition: 0.5s;
+    border-style: none;
+  }
+  button:hover{
+    background-color: #DAA520;
+    color: white;
+  }
+}
